@@ -13,11 +13,11 @@ Esta pasta abriga todas as páginas estruturais do sistema (**arquivos `.html`**
 * **O que colocar aqui:** `login.html`, `dashboard.html`, `abrir-os.html`, `historico.html`.
 * **Regra do time:** Nenhum código CSS ou JavaScript deve ser escrito direto dentro desses arquivos. Use apenas marcação HTML pura e importe os recursos da pasta `static`.
 
-### 📁 `src/main/resources/static/img/ (Criar se necessário)`
+### 📁 `src/main/resources/static/img/`
 * **O que colocar aqui:** Logotipos, ícones exportados do Figma e imagens de apoio do sistema.
 
 ### 📁 `src/main/resources/static/js/`
-Esta pasta guarda guarda as regras de comportamento da tela e chamadas de rede (**arquivos `.js`**).
+Esta pasta guarda as regras de comportamento da tela e chamadas de rede (**arquivos `.js`**).
 * **O que colocar aqui:** `login.js`, `ordem-servico.js`, `validacoes.js`.
 * **Função Principal:** Interceptar os cliques de botões, ler dados dos formulários e fazer requisições HTTP (fetch) para o nosso servidor Java (Backend).
 
