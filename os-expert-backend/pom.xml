@@ -12,4 +12,11 @@
 
     <artifactId>os-expert-backend</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>at.favre.lib</groupId>
+            <artifactId>bcrypt</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
