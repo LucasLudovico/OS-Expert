@@ -1,0 +1,98 @@
+/* 1. CONFIGURAÇÃO DE FONTES E VARIÁVEIS OFICIAIS (DO FIGMA) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --bg-main: #FFFFFF;             /* O fundo real da aplicação é branco */
+    --primary-orange: #f57c1f;      /* Laranja oficial dos botões e logo */
+    --primary-dark: #12192c;        /* Azul escuro/Preto dos botões de salvar */
+    --text-dark: #43526e;           /* Cinza azulado para labels e textos menores */
+    --text-input: #000000;          /* Texto digitado preto */
+    --font-main: 'Poppins', sans-serif;
+}
+
+/* 2. RESET GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    font-family: var(--font-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 3. COMPONENTES PADRONIZADOS */
+.card-container {
+    background-color: var(--bg-main);
+    width: 100%;
+    max-width: 450px;           /* Tamanho ideal para centralizar o formulário na tela */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: var(--text-input);
+    background-color: transparent;
+    border: 2px solid #000000;   /* Borda preta marcante dos inputs do seu Figma */
+    border-radius: 15px;         /* Cantos arredondados dos inputs do protótipo */
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-orange);
+}
+
+/* Botões base */
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 15px;         /* Cantos arredondados dos botões do Figma */
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: #FFFFFF;
+}
+
+.btn-dark {
+    background-color: var(--primary-dark);
+    color: #FFFFFF;
+}

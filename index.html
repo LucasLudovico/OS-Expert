@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Login</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+    <main class="card-container">
+        
+        <h1 style="font-size: 36px; color: var(--primary-orange); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px;">
+            OS-Expert
+        </h1>
+
+        <form id="login-form" style="width: 100%;">
+            
+            <div class="form-group">
+                <label for="email">E-mail Corporativo</label>
+                <input type="email" id="email" placeholder="nome@osexpert.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn btn-orange" style="margin-top: 15px;">
+                Entrar
+            </button>
+            
+        </form>
+        <a href="#" style="margin-top: 25px; color: var(--text-dark); text-decoration: none; font-size: 16px; font-weight: 700;">
+            Esqueceu a senha?
+        </a>
+
+    </main>
+
+    <script src="js/database-mock.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
