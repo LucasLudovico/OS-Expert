@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --bg-main: #FFFFFF;             /* O fundo real da aplicação é branco */
+    --bg-main: #FFFFFF;             /* OBackground main é Branco */
     --primary-orange: #f57c1f;      /* Laranja oficial dos botões e logo */
     --primary-dark: #12192c;        /* Azul escuro/Preto dos botões de salvar */
     --text-dark: #43526e;           /* Cinza azulado para labels e textos menores */
