@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Cadastro</title>
+
+    <link rel="stylesheet" href="../static/css/cadastro.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Novo Cadastro</h1>
+
+        <form id="formCadastro">
+            <div class="campo">
+                <label>NOME DO CLIENTE</label>
+                <input type="text" id="nome">
+            </div>
+
+            <div class="campo">
+                <label>CPF / CNPJ</label>
+                <input type="text" id="cpf">
+            </div>
+
+            <div class="campo">
+                <label>PLACA DO CARRO</label>
+                <input type="text" id="placa">
+            </div>
+
+            <div class="campo">
+                <label>MODELO/ANO</label>
+                <input type="text" id="modelo">
+            </div>
+
+            <button type="button" onclick="salvarCliente()">
+                SALVAR CLIENTE
+            </button>
+        </form>
+    </div>
+
+    <script src="../static/js/cadastro.js"></script>
+</body>
+</html>

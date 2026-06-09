@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.card-historico {
+    background-color: #ffffff;
+    width: 420px;
+    min-height: 520px; 
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título e Linha Divisória */
+.titulo-historico {
+    color: #121c2c;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.linha-divisoria {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+/* Seção de Busca  */
+.container-busca {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.input-placa {
+    flex: 1;
+    border: 1px solid #8e8e8e;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 18px;
+    color: #121c2c;
+    outline: none;
+}
+
+.botao-busca {
+    background-color: #121c2c; 
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.botao-busca:hover {
+    background-color: #1d2b42;
+}
+
+/* Lista e Itens do Histórico */
+.lista-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-historico {
+    border: 1px solid #8e8e8e;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.data-item {
+    color: #929db0;
+    font-size: 14px;
+}
+
+.servico-item {
+    color: #52627a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.mecanico-item {
+    color: #8391a7;
+    font-size: 14px;
+}
