@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Novo Cadastro</title>
+    <link rel="stylesheet" href="../../static/css/atendente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+</head>
+<body>
+<main class="card-container app-screen">
+    <a href="home.html" class="btn-back">←</a>
+    <h1 class="view-title">Novo Cadastro</h1>
+
+    <form class="action-form" onsubmit="event.preventDefault(); alert('Cliente salvo com sucesso no Mock!'); window.location.href='home.html';">
+        <div class="form-group">
+            <label>Nome do Cliente</label>
+            <input type="text" required placeholder="Digite o nome completo">
+        </div>
+        <div class="form-group">
+            <label>CPF / CNPJ</label>
+            <input type="text" required placeholder="000.000.000.00">
+        </div>
+        <div class="form-group">
+            <label>Placa do Carro</label>
+            <input type="text" required placeholder="AAA-0000">
+        </div>
+        <div class="form-group">
+            <label>Modelo/Ano</label>
+            <input type="text" required placeholder="Ex: Civic 2.0 2020">
+        </div>
+        <button type="submit" class="btn btn-dark button-submit-fix">Salvar Cliente</button>
+    </form>
+</main>
+</body>
+</html>

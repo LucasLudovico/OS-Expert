@@ -18,7 +18,7 @@ loginForm.addEventListener('submit', function (event) {
 
     // 4. Regra de validação (Simulando o comportamento de login seguro)
     // No mock, vamos aceitar qualquer senha padrão com mais de 4 caracteres para fins de teste
-    if (usuarioEncontrado && senhaDigitada.length >= 4) {
+    if (usuarioEncontrado && senhaDigitada=== "1234") {
 
         // Guarda as informações do usuário logado na memória temporária do navegador (SessionStorage)
         // Isso é ótimo para sabermos se quem logou foi o Lucas (Gestor), a Dryele (Atendente) ou o Gustavo (Mecânico)
@@ -27,7 +27,7 @@ loginForm.addEventListener('submit', function (event) {
         alert(`Bem-vindo(a), ${usuarioEncontrado.nome}! Redirecionando para o painel...`);
 
         // Próximo passo quando tivermos as outras telas prontas:
-        // window.location.href = 'dashboard.html';
+        window.location.href = 'home.html';
 
     } else {
         // Mensagem de erro caso o e-mail não exista na nossa lista mockada
