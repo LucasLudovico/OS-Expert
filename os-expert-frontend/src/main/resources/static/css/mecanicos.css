@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:360px;
+    background:#f5f5f5;
+    border-radius:12px;
+    padding:20px;
+}
+
+.voltar{
+    color:#666;
+    font-size:20px;
+    text-decoration:none;
+}
+
+h1{
+    margin-top:10px;
+    font-size:30px;
+    color:#232b3b;
+}
+
+.descricao{
+    margin-top:15px;
+    color:#7a869a;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.topo h3{
+    font-size:16px;
+}
+
+.baixo{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.baixo p{
+    width:150px;
+    font-size:12px;
+    color:#666;
+}
+
+.baixo strong{
+    font-size:12px;
+}
+
+.ocupado,
+.disponivel,
+.indisponivel{
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.ocupado{
+    background:#d9f5e5;
+    color:#23a455;
+}
+
+.disponivel{
+    background:#ffeab7;
+    color:#d88b00;
+}
+
+.indisponivel{
+    background:#ececec;
+    color:#7a869a;
+}
