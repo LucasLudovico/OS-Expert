@@ -1,36 +1,88 @@
-// 1. Mapeia os elementos do HTML que vamos interagir
 const loginForm = document.getElementById('login-form');
 const emailInput = document.getElementById('email');
 const senhaInput = document.getElementById('senha');
 
-// 2. Escuta o evento de "submissão" (envio) do formulário
-loginForm.addEventListener('submit', function (event) {
-    // Evita o comportamento padrão do HTML de recarregar a página
+loginForm.addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    // Captura os valores digitados pelo usuário
-    const emailDigitado = emailInput.value.trim();
+    const valorDigitado = emailInput.value.trim();
     const senhaDigitada = senhaInput.value;
 
-    // 3. Busca o usuário dentro da nossa lista mockada (do arquivo database-mock.js)
-    // Usamos uma verificação simples simulando o e-mail corporativo
-    const usuarioEncontrado = mockUsuarios.find(user => user.email.toLowerCase() === emailDigitado.toLowerCase());
+    // --- [FLUXO CLIENTE] SE NÃO TIVER '@', IDENTIFICA QUE É UMA PLACA ---
+    if (!valorDigitado.includes('@')) {
+        const placaCliente = valorDigitado.toUpperCase();
 
-    // 4. Regra de validação (Simulando o comportamento de login seguro)
-    // No mock, vamos aceitar qualquer senha padrão com mais de 4 caracteres para fins de teste
-    if (usuarioEncontrado && senhaDigitada=== "1234") {
+        try {
+            // 1. Consulta o ClienteController no Java para ver se a placa existe
+            const responseCliente = await fetch(`http://localhost:8080/clientes?placa=${placaCliente}`);
 
-        // Guarda as informações do usuário logado na memória temporária do navegador (SessionStorage)
-        // Isso é ótimo para sabermos se quem logou foi o Lucas (Gestor), a Dryele (Atendente) ou o Gustavo (Mecânico)
-        sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
+            if (responseCliente.ok) {
+                const dadosCliente = await responseCliente.json();
 
-        alert(`Bem-vindo(a), ${usuarioEncontrado.nome}! Redirecionando para o painel...`);
+                // 2. Guarda os dados do carro e cliente retornados do Java no localStorage
+                localStorage.setItem('cliente_placa', dadosCliente.placa);
+                localStorage.setItem('cliente_nome', dadosCliente.nomeCliente);
+                localStorage.setItem('cliente_carro', dadosCliente.modeloCarro);
 
-        // Próximo passo quando tivermos as outras telas prontas:
-        window.location.href = 'home.html';
+                // 3. Cria o objeto mock com a senha padrão de 1234 e o cargo CLIENTE
+                const usuarioClienteMock = {
+                    id: 999,
+                    nome: dadosCliente.nomeCliente,
+                    email: `${placaCliente}@osexpert.com`,
+                    cargo: "CLIENTE"
+                };
 
-    } else {
-        // Mensagem de erro caso o e-mail não exista na nossa lista mockada
-        alert('E-mail corporativo ou senha inválidos! Tente novamente.');
+                // 4. Salva na sessão e redireciona
+                sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioClienteMock));
+                alert(`Bem-vindo(a), ${dadosCliente.nomeCliente}! Carregando dados do veículo...`);
+
+                window.location.href = "Cliente/home.html";
+                return;
+            } else {
+                alert('Nenhum veículo com esta placa foi encontrado no sistema do backend!');
+                return;
+            }
+        } catch (error) {
+            console.error("Erro ao buscar dados no ClienteController:", error);
+            alert("Erro ao conectar com o servidor para validar a placa.");
+            return;
+        }
+    }
+
+    // --- [FLUXO CORPORATIVO] SE TIVER '@', É ATENDENTE, MECÂNICO OU GESTOR ---
+    try {
+        // Rota corrigida de volta para a original: /auth/login
+        const response = await fetch("http://localhost:8080/auth/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({email: valorDigitado, senha: senhaDigitada})
+        });
+
+        if (!response.ok) {
+            alert('E-mail corporativo ou senha inválidos! Tente novamente.');
+            return;
+        }
+
+        // Se o Java validou o funcionário mockado do LoginController
+        const usuarioLogado = await response.json();
+
+        // Salva na sessão do navegador
+        sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
+        alert(`Bem-vindo(a), ${usuarioLogado.nome}! Redirecionando para o painel...`);
+
+        // Seu roteador original idêntico ao que você tinha
+        if (usuarioLogado.cargo === "MECANICO") {
+            window.location.href = "Mecanico/home.html";
+        } else if (usuarioLogado.cargo === "ATENDENTE" || usuarioLogado.cargo === "GESTOR" || usuarioLogado.cargo === "GERENTE") {
+            window.location.href = "Atendente/home.html";
+        } else if (usuarioLogado.cargo === "CLIENTE") {
+            window.location.href = "Cliente/home.html";
+        } else {
+            window.location.href = "Atendente/home.html";
+        }
+
+    } catch (error) {
+        console.error("Erro na comunicação com o LoginController:", error);
+        alert("Erro ao conectar com o servidor da oficina. Certifique-se de que o backend Java está rodando.");
     }
 });

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Galeria de Fotos</title>
+    <link rel="stylesheet" href="../../static/css/cliente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+
+    <style>
+        .photo-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .photo-badge {
+            z-index: 2; /* Mantém o badge sempre acima da foto real */
+        }
+    </style>
+</head>
+<body>
+
+<main class="card-container app-screen">
+    <a href="resumo-servico.html" class="btn-back">&#8592;</a>
+
+    <header class="gallery-header">
+        <h1 class="gallery-title">Galeria de Fotos</h1>
+        <p class="gallery-subtitle">
+            Evidências fotográficas registradas pelo mecânico Ricardo durante o diagnóstico técnico da OS #452:
+        </p>
+    </header>
+
+    <section class="gallery-container">
+
+        <div class="gallery-row-double">
+
+            <div class="gallery-card">
+                <div class="photo-container">
+                    <span class="photo-badge badge-danger">TROCAR</span>
+                    <img src="../../static/img/pastilhadefreiodesgastada.JPG"
+                         alt="Pastilha de freio desgastada no limite">
+                </div>
+                <div class="photo-caption">
+                    <p>Pastilha de freio desgastada no limite.</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="photo-container">
+                    <span class="photo-badge badge-ok">OK</span>
+                    <img src="../../static/img/filtrodeoleonovo.png" alt="Filtro de óleo novo instalado">
+                </div>
+                <div class="photo-caption">
+                    <p>Filtro de óleo antigo removido.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="gallery-row-single">
+
+            <div class="gallery-card full-width">
+                <div class="photo-container spec-large">
+                    <span class="photo-badge badge-warning">ATENÇÃO</span>
+                    <img src="../../static/img/cargafluidofreiocontaminada.jpg"
+                         alt="Análise de contaminação do fluído de freio">
+                </div>
+                <div class="photo-caption">
+                    <p>Análise de contaminação do fluído de freio (umidade elevada).</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="gallery-actions">
+        <a href="resumo-servico.html" class="btn-return-summary">VOLTAR AO RESUMO</a>
+    </footer>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OsExpert - Portal do Cliente</title>
+    <link rel="stylesheet" href="../../static/css/cliente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+</head>
+<body>
+
+<main class="card-container app-screen">
+
+    <header class="client-header">
+        <h1 class="brand-title">OsExpert</h1>
+        <span class="brand-subtitle">Portal de Acompanhamento</span>
+    </header>
+
+    <section class="vehicle-status-box">
+        <p>Seu veículo está em nossa oficina:</p>
+        <h2 class="vehicle-info">Civic (ABC-1234)</h2>
+        <div class="badge-container">
+            <span class="badge-status">EM MANUTENÇÃO</span>
+        </div>
+    </section>
+
+    <nav class="menu-grid">
+
+        <a href="status-atual.html" class="menu-card">
+            <div class="icon-box bg-icon-cream">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </div>
+            <div>
+                <h2>Ver Status Atual</h2>
+                <p>Verificar a linha de tempo do serviço</p>
+            </div>
+        </a>
+
+        <a href="resumo-servico.html" class="menu-card">
+            <div class="icon-box bg-icon-light-blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+            </div>
+            <div>
+                <h2>Resumo do Serviço</h2>
+                <p>Visualizar custos, fotos e aprovar itens extras</p>
+            </div>
+        </a>
+
+        <a href="pagamento-os.html" class="menu-card">
+            <div class="icon-box bg-icon-cream">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                </svg>
+            </div>
+            <div>
+                <h2>Realizar Pagamento</h2>
+                <p>Efetuar fechamento da OS via PIX</p>
+            </div>
+        </a>
+
+    </nav>
+</main>
+
+<script src="../../static/js/Cliente/home.js"></script>
+
+</body>
+</html>

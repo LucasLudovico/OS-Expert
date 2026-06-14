@@ -1,0 +1,272 @@
+/* ==========================================================================
+   1. FRAME DO CELULAR E COMPONENTES GLOBAIS DO MECÂNICO
+   ========================================================================== */
+.app-screen {
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    min-height: 780px;
+}
+
+/* O botão de voltar oficial com as especificações do atendente */
+.btn-back {
+    background: none !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #a0aec0 !important;
+    cursor: pointer !important;
+    align-self: flex-start !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    transition: color 0.2s !important;
+    text-decoration: none !important;
+}
+
+.btn-back:hover {
+    color: #4a5568 !important;
+}
+
+/* Força a linha divisória a se comportar como bloco e empurrar os cards */
+.divider {
+    display: block !important;
+    clear: both !important;
+    border: none !important;
+    border-top: 1.5px solid #e2e8f0 !important;
+    margin-bottom: 25px !important;
+    width: 100% !important;
+}
+
+/* Links do menu sem sublinhados */
+.menu-grid a {
+    text-decoration: none !important;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. CONFIGURAÇÕES DA HOME DO MECÂNICO (MANTIDA INTACTA)
+   ========================================================================== */
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.sub-greeting {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8fa0ba;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.main-title {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.profile-badge {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #ff7315;
+    color: #000000;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Cartão padrão com contorno (outline) suave */
+.menu-grid .menu-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 16px !important;
+    border: 2px solid #000000 !important;
+    border-radius: 15px !important;
+    background-color: #FFFFFF !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: transform 0.1s, border-color 0.1s !important;
+}
+
+.menu-grid .menu-card:hover {
+    transform: translateY(-1px) !important;
+    border-color: #ff7315 !important;
+}
+
+.menu-grid .menu-card h2 {
+    font-size: 18px !important;
+    color: #1e293b !important;
+    font-weight: 700 !important;
+    margin: 0 0 2px 0 !important;
+}
+
+.menu-grid .menu-card p {
+    font-size: 12px !important;
+    color: #8fa0ba !important;
+    margin: 0 !important;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    flex-shrink: 0;
+}
+
+.bg-icon-pink {
+    background-color: #fff7ed;
+}
+
+.bg-icon-blue {
+    background-color: #eff6ff;
+}
+
+.bg-icon-purple {
+    background-color: #f3e8ff;
+}
+
+
+/* ==========================================================================
+   3. REGRAS EXCLUSIVAS DA TELA DE TAREFAS (DESIGN SUAVE DO ATENDENTE)
+   ========================================================================== */
+
+/* Título das views técnicas */
+.view-title {
+    font-size: 24px !important;
+    color: #1e293b !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+    align-self: flex-start !important;
+}
+
+/* Modificador do card de tarefas mantendo o outline de 2px e raio de 15px */
+.menu-grid .task-card-flow {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    cursor: default !important;
+    padding: 16px !important;
+    border: 2px solid #000000 !important;
+    border-radius: 15px !important;
+    background-color: #FFFFFF !important;
+}
+
+/* Remove efeitos de hover na visualização de tarefas estáticas */
+.menu-grid .task-card-flow:hover {
+    border-color: #000000 !important;
+    transform: none !important;
+}
+
+/* Título interno do card */
+.task-info-block h2 {
+    font-size: 18px !important;
+    color: #1e293b !important;
+    font-weight: 700 !important;
+    margin: 0 0 4px 0 !important;
+}
+
+/* Modelo do veículo sutil */
+.task-info-block h2 .car-model {
+    font-weight: 400 !important;
+    color: #8fa0ba !important;
+    margin-left: 4px !important;
+}
+
+/* Badges de Status arredondadas */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.status-execucao {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-aguardando {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+/* Flexbox dos botões lado a lado */
+.task-card-actions {
+    display: flex !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 6px !important;
+    box-sizing: border-box !important;
+}
+
+/* Botões calibrados para não estourarem o padding do container */
+.btn-task {
+    flex: 1 !important;
+    padding: 10px 14px !important;
+    border: 2px solid #000000 !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px !important;
+    box-sizing: border-box !important;
+    transition: opacity 0.2s !important;
+    display: inline-block;
+}
+
+.btn-task:hover {
+    opacity: 0.9 !important;
+}
+
+/* Botão Primário Escuro (Cores suaves base do sistema) */
+.btn-task-primary {
+    background-color: #12192c !important;
+    color: #FFFFFF !important;
+}
+
+/* Botão Secundário Cinza de Peças com borda suave */
+.btn-task-secondary {
+    background-color: #f1f5f9 !important;
+    color: #12192c !important;
+    border: 1.5px solid #cbd5e1 !important;
+}
+
+/* Botão Peças Desabilitado */
+.btn-task-disabled {
+    background-color: #f8fafc !important;
+    color: #cbd5e1 !important;
+    border-color: #e2e8f0 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Minhas Tarefas</title>
+    <link rel="stylesheet" href="../../static/css/global.css">
+    <link rel="stylesheet" href="../../static/css/mecanico.css">
+</head>
+<body>
+
+<main class="card-container app-screen">
+    <a href="home.html" class="btn-back">←</a>
+
+    <h1 class="view-title">Minhas Tarefas</h1>
+    <hr class="divider">
+
+    <div class="menu-grid">
+
+        <div class="menu-card task-card-flow">
+            <div class="task-info-block">
+                <h2>ABC-1234 <span class="car-model">- Civic</span></h2>
+                <span class="status-badge status-execucao">Em Execução</span>
+            </div>
+
+            <div class="task-card-actions">
+                <a href="finalizar.html" class="btn-task btn-task-primary">Finalizar</a>
+                <a href="pecas.html" class="btn-task btn-task-secondary">Peças</a>
+            </div>
+        </div>
+
+        <div class="menu-card task-card-flow">
+            <div class="task-info-block">
+                <h2>XYZ-9999 <span class="car-model">- Hilux</span></h2>
+                <span class="status-badge status-aguardando">Aguardando</span>
+            </div>
+
+            <div class="task-card-actions">
+                <a href="#" class="btn-task btn-task-primary"
+                   onclick="alert('Iniciando o serviço da Hilux (XYZ-9999)!'); return false;">Iniciar</a>
+                <a href="#" class="btn-task btn-task-secondary btn-task-disabled">Peças</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>

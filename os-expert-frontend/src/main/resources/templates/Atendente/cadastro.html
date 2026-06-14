@@ -12,25 +12,32 @@
     <a href="home.html" class="btn-back">←</a>
     <h1 class="view-title">Novo Cadastro</h1>
 
-    <form class="action-form" onsubmit="event.preventDefault(); alert('Cliente salvo com sucesso no Mock!'); window.location.href='home.html';">
+    <form class="action-form" id="formCadastro">
         <div class="form-group">
             <label>Nome do Cliente</label>
-            <input type="text" required placeholder="Digite o nome completo">
+            <input type="text" id="nome" required placeholder="Digite o nome completo">
+        </div>
+        <div class="form-group">
+            <label>Telefone</label>
+            <input type="text" id="telefone" required placeholder="(11) 99999-9999">
         </div>
         <div class="form-group">
             <label>CPF / CNPJ</label>
-            <input type="text" required placeholder="000.000.000.00">
+            <input type="text" id="cpf" required placeholder="000.000.000.00">
         </div>
         <div class="form-group">
             <label>Placa do Carro</label>
-            <input type="text" required placeholder="AAA-0000">
+            <input type="text" id="placa" required placeholder="AAA-0000">
         </div>
         <div class="form-group">
             <label>Modelo/Ano</label>
-            <input type="text" required placeholder="Ex: Civic 2.0 2020">
+            <input type="text" id="modelo" required placeholder="Ex: Civic 2.0 2020">
         </div>
+
         <button type="submit" class="btn btn-dark button-submit-fix">Salvar Cliente</button>
     </form>
 </main>
+
+<script src="../../static/js/Atendente/cadastro.js"></script>
 </body>
 </html>

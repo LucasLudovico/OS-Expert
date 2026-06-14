@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Status das OS</title>
+    <link rel="stylesheet" href="../../static/css/atendente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+</head>
+<body>
+<main class="card-container app-screen">
+    <a href="home.html" class="btn-back">←</a>
+    <h1 class="view-title titulo-status">Status das OS</h1>
+    <hr class="divider linha-divisoria">
+
+    <div class="table-frame container-tabela">
+        <table class="status-table tabela-os" id="tabelaStatus">
+            <thead>
+            <tr>
+                <th>OS</th>
+                <th>Placa</th>
+                <th>Status</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>#101</td>
+                <td>ABC-1234</td>
+                <td>Em Andamento</td>
+                <td><span class="link-status" onclick="verDetalhes(101)">Ver</span></td>
+            </tr>
+            <tr>
+                <td>#102</td>
+                <td>XYZ-9876</td>
+                <td>Aberta</td>
+                <td><span class="link-status" style="cursor:pointer;"
+                          onclick="alert('Detalhes da OS #102:\nVeículo: Onix 1.0\nServiço: Alinhamento\nStatus: Aberta')">Ver</span>
+                </td>
+            </tr>
+            <tr>
+                <td>#103</td>
+                <td>KGI-2026</td>
+                <td>Finalizada</td>
+                <td><span class="link-status" style="cursor:pointer;"
+                          onclick="alert('Detalhes da OS #103:\nVeículo: GM Vectra\nServiço: Multitimer\nStatus: Finalizada')">Ver</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

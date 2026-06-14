@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Itens Recomendados</title>
+    <link rel="stylesheet" href="../../static/css/cliente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+</head>
+<body>
+
+<main class="card-container app-screen">
+    <!-- Botão de Retorno (Voltar para o Resumo) -->
+    <a href="resumo-servico.html" class="btn-back">&#8592;</a>
+
+    <!-- Cabeçalho da Tela -->
+    <header class="rec-header">
+        <h1 class="rec-title">Itens Recomendados</h1>
+        <p class="rec-subtitle">
+            O mecânico identificou desgastes de segurança que requerem substituição imediata.
+        </p>
+    </header>
+
+    <!-- Card de Recomendações do Técnico (Borda e Fundo Laranja Claro) -->
+    <section class="tech-card">
+        <h2 class="tech-card-title">RECOMENDADOS PELO TÉCNICO</h2>
+
+        <!-- Item 1: Selecionado -->
+        <label class="rec-item-row">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" class="rec-checkbox" checked>
+                <span class="custom-checkbox"></span>
+            </div>
+            <div class="rec-item-content">
+                <div class="rec-item-header">
+                    <span class="rec-item-name">Pastilha de Freio Diant.</span>
+                    <span class="rec-item-price">+ R$ 120,00</span>
+                </div>
+                <p class="rec-item-desc">Pastilhas no limite do desgaste térmico.</p>
+            </div>
+        </label>
+
+        <!-- Item 2: Não Selecionado -->
+        <label class="rec-item-row">
+            <div class="checkbox-wrapper">
+                <input type="checkbox" class="rec-checkbox">
+                <span class="custom-checkbox"></span>
+            </div>
+            <div class="rec-item-content">
+                <div class="rec-item-header">
+                    <span class="rec-item-name">Fluído de Freio DOT4</span>
+                    <span class="rec-item-price">+ R$ 80,00</span>
+                </div>
+                <p class="rec-item-desc">Presença de umidade acima de 3,5%.</p>
+            </div>
+        </label>
+    </section>
+
+    <!-- Tabela Resumo de Valores Recalculados -->
+    <section class="breakdown-box">
+        <div class="breakdown-row">
+            <span class="breakdown-label">Revisão Base:</span>
+            <span class="breakdown-value text-dark">R$ 345,00</span>
+        </div>
+        <div class="breakdown-row">
+            <span class="breakdown-label">Selecionados:</span>
+            <span class="breakdown-value text-green">+ R$ 120,00</span>
+        </div>
+        <div class="breakdown-divider"></div>
+        <div class="breakdown-row total-row">
+            <span class="breakdown-label-bold">Total Geral:</span>
+            <span class="breakdown-value-bold text-blue">R$ 465,00</span>
+        </div>
+    </section>
+
+    <!-- Botões de Decisão e Fluxo -->
+    <footer class="rec-actions">
+        <button class="btn-confirm-extra">CONFIRMAR ADICIONAIS</button>
+        <button class="btn-keep-base">MANTER REVISÃO BASE</button>
+    </footer>
+</main>
+
+<script src="../../static/js/Cliente/itens-recomendados.js"></script>
+
+</body>
+</html>

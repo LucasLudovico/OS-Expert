@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Status de Serviço</title>
+    <link rel="stylesheet" href="../../static/css/cliente.css">
+    <link rel="stylesheet" href="../../static/css/global.css">
+</head>
+<body>
+
+<main class="card-container app-screen">
+    <a href="home.html" class="btn-back">&#8592;</a>
+
+    <header class="status-header">
+        <h1 class="brand-title">OsExpert</h1>
+        <span class="brand-subtitle">STATUS DE SERVIÇO</span>
+    </header>
+
+    <section class="vehicle-card-highlight">
+        <p class="client-greeting">Olá, João! Seu veículo é o</p>
+        <h2 class="vehicle-title-bold">Civic (ABC-1234)</h2>
+        <div class="badge-wrapper">
+            <span class="badge-status-yellow">EM MANUTENÇÃO</span>
+        </div>
+    </section>
+
+    <section class="timeline-container">
+
+        <div class="timeline-item step-completed">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+                <h3>Entrada & Checklist</h3>
+                <p>Realizado em 14/05 às 09:00</p>
+            </div>
+        </div>
+
+        <div class="timeline-item step-completed">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+                <h3>Orçamento Aprovado</h3>
+                <p>Confirmado via sistema</p>
+            </div>
+        </div>
+
+        <div class="timeline-item step-active">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+                <h3>Execução Técnica</h3>
+                <p>Mecânico Ricardo trabalhando no motor</p>
+            </div>
+        </div>
+
+        <div class="timeline-item step-pending">
+            <div class="timeline-node"></div>
+            <div class="timeline-content">
+                <h3>Teste de Rodagem & Limpeza</h3>
+                <p>Aguardando início</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="action-footer">
+        <button class="btn-chat-mechanic">FALAR COM A MECÂNICA</button>
+    </footer>
+</main>
+
+<script src="../../static/js/Cliente/timeline.js"></script>
+
+</body>
+</html>

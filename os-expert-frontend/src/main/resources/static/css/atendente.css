@@ -1,16 +1,9 @@
-/* EXTENSÃO DO DESIGN SYSTEM DO FIGMA PARA AS HOMES */
-
-/* Controle de exibição das telas (Mecanismo SPA) */
-.app-view {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-}
-.app-view.active {
-    display: flex;
-}
-
 /* Ajustes finos para simular o frame limpo do celular */
+
+a {
+    text-decoration: none !important;
+}
+
 .app-screen {
     justify-content: flex-start !important;
     align-items: stretch !important;
@@ -25,6 +18,7 @@
     margin-bottom: 35px;
     width: 100%;
 }
+
 .sub-greeting {
     font-size: 12px;
     font-weight: 700;
@@ -32,11 +26,13 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
 .main-title {
     font-size: 26px;
     color: #1e293b;
     font-weight: 700;
 }
+
 .profile-badge {
     width: 45px;
     height: 45px;
@@ -57,6 +53,7 @@
     gap: 16px;
     width: 100%;
 }
+
 .menu-card {
     display: flex;
     align-items: center;
@@ -68,16 +65,19 @@
     cursor: pointer;
     transition: transform 0.1s, border-color 0.1s;
 }
+
 .menu-card:hover {
     transform: translateY(-1px);
     border-color: var(--primary-orange);
 }
+
 .menu-card h2 {
     font-size: 18px;
     color: #1e293b;
     font-weight: 700;
     margin-bottom: 2px;
 }
+
 .menu-card p {
     font-size: 12px;
     color: #8fa0ba;
@@ -95,6 +95,7 @@
     color: #000000;
     flex-shrink: 0;
 }
+
 .bg-icon-blue   { background-color: #eff6ff; }
 .bg-icon-purple { background-color: #f3e8ff; }
 .bg-icon-pink   { background-color: #fdf2f8; }
@@ -140,6 +141,64 @@
 }
 
 /* Telas Específicas: Nova OS */
+
+.btn-orange-highlight {
+    background-color: #ff7315 !important;
+    color: #ffffff !important;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, transform 0.1s;
+}
+
+.btn-orange-highlight:hover {
+    background-color: #e66205 !important;
+    transform: translateY(-1px);
+}
+
+.cliente-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.cliente-select {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    border: 2px solid #111;
+    border-radius: 14px;
+
+    background: #fff;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.cliente-select:hover {
+    transform: translateY(-1px);
+}
+
+.cliente-select:focus {
+    border-color: #1b2b4b;
+    box-shadow: 0 0 0 3px rgba(27, 43, 75, 0.15);
+}
+
 .os-summary-box {
     width: 100%;
     border: 1.5px solid #718096;
@@ -279,11 +338,35 @@
     color: #000000;
 }
 
-/* Efeito zebrado idêntico à imagem anexada */
 .status-table tbody tr:nth-child(odd) {
     background-color: #e2e8f0;
 }
 
 .status-table tbody tr:nth-child(even) {
     background-color: #FFFFFF;
+}
+
+.cliente-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 0;
+
+    font-size: 14px;
+}
+
+.info-label {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.cliente-info-row span:last-child {
+    color: #4a5568;
+}
+
+.cliente-divider {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 12px 0;
 }

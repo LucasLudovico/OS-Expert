@@ -1,0 +1,1033 @@
+/* Importação e herança de regras estruturais do celular */
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.app-screen {
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    min-height: 780px;
+}
+
+/* Botão de Retorno (Voltar) */
+.btn-back {
+    background: none !important;
+    border: none !important;
+    font-size: 24px !important;
+    color: #a0aec0 !important;
+    cursor: pointer !important;
+    align-self: flex-start !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    transition: color 0.2s !important;
+    text-decoration: none !important;
+}
+
+.btn-back:hover {
+    color: #4a5568 !important;
+}
+
+/* Cabeçalho Customizado do Portal do Cliente */
+.client-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.brand-title {
+    font-size: 34px;
+    color: #ff7315; /* Laranja da marca OsExpert */
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5c6f84;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    display: block;
+    margin-top: 6px;
+}
+
+/* Caixa de Status Central do Veículo */
+.vehicle-status-box {
+    width: 100%;
+    background-color: #f4f6f9;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 18px;
+    padding: 24px 16px;
+    text-align: center;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+
+.vehicle-status-box p {
+    font-size: 16px;
+    color: #4a5568;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.vehicle-info {
+    font-size: 24px;
+    color: #12192c;
+    font-weight: 800;
+    margin: 0 0 14px 0;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+}
+
+.badge-status {
+    background-color: #fef3c7; /* Fundo amarelo suave */
+    color: #b45309; /* Texto marrom/ouro escuro */
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Grid de Navegação e Cards */
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 16px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-1px);
+    border-color: #ff7315;
+    box-shadow: 0 4px 12px rgba(255, 115, 21, 0.08);
+}
+
+.menu-card h2 {
+    font-size: 18px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+}
+
+.menu-card p {
+    font-size: 13px;
+    color: #8fa0ba;
+    margin: 0;
+}
+
+/* Caixas de Ícones Internas */
+.icon-box {
+    width: 52px;
+    height: 52px;
+    border: 1.5px solid #000000;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    flex-shrink: 0;
+}
+
+/* Cores de Fundo Específicas dos Ícones da Home do Cliente */
+.bg-icon-cream {
+    background-color: #fefae0;
+}
+
+.bg-icon-light-blue {
+    background-color: #f0f4f8;
+}
+
+
+/* ==========================================================================
+   SEÇÃO: STATUS DA OS (status-os.html)
+   ========================================================================== */
+
+/* Ajuste fino de espaçamento superior da tela de status */
+.status-header {
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Card com sombra e linha superior azul do Figma */
+.vehicle-card-highlight {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border-top: 5px solid #3b82f6;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03);
+    margin-bottom: 35px;
+    box-sizing: border-box;
+}
+
+.client-greeting {
+    font-size: 16px;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.vehicle-title-bold {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 800;
+    margin: 0 0 14px 0;
+}
+
+.badge-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.badge-status-yellow {
+    background-color: #fef3c7;
+    color: #b45309;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Container Geral da Timeline */
+.timeline-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Elemento de Linha Unificado por Item */
+.timeline-item {
+    position: relative;
+    padding-left: 36px; /* Espaço exato para os dots alinharem na esquerda */
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+
+/* Linha conectora vertical */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 6px; /* Centralização do ponto: (14px dot / 2) - (2px line / 2) */
+    top: 18px; /* Começa abaixo do dot atual */
+    bottom: -36px; /* Estende-se cruzando o margin-bottom */
+    width: 2px;
+    background-color: #cbd5e1;
+    z-index: 1;
+}
+
+/* A linha para exatamente no último nó cinza */
+.timeline-item:last-child::before {
+    display: none !important;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilização Base Estável dos Dots */
+.timeline-node {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.timeline-content h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 4px 0;
+}
+
+.timeline-content p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Estados de Progresso da Timeline */
+
+/* Concluído (Verde) */
+.step-completed .timeline-node {
+    background-color: #22c55e;
+}
+
+/* Execução Atual (Azul - Ajuste geométrico estável) */
+.step-active .timeline-node {
+    background-color: #3b82f6;
+    border: 3px solid #dbeafe;
+    width: 18px;
+    height: 18px;
+    left: -2px;
+    top: 2px;
+}
+
+/* Pendente (Cinza Foscado) */
+.step-pending .timeline-node {
+    background-color: #94a3b8;
+}
+
+.step-pending .timeline-content h3 {
+    color: #94a3b8;
+}
+
+.step-pending .timeline-content p {
+    color: #cbd5e1;
+}
+
+/* Botão Fixo Inferior Protegido Contra Falta de Estilo */
+.action-footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-chat-mechanic,
+.action-footer button {
+    width: 100% !important;
+    background-color: #3b82f6 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 14px !important;
+    padding: 18px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.15s ease, transform 0.1s ease !important;
+    display: block !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.btn-chat-mechanic:hover,
+.action-footer button:hover {
+    background-color: #2563eb !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-chat-mechanic:active,
+.action-footer button:active {
+    transform: translateY(0) !important;
+}
+
+
+/* ==========================================================================
+   SEÇÃO: RESUMO DO SERVIÇO (resumo-servico.html)
+   ========================================================================== */
+
+.summary-header {
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.summary-title {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Card Branco de Itens da Revisão */
+.review-items-card {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.items-section-title {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin: 0 0 18px 0;
+}
+
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.item-name {
+    color: #334155;
+    font-weight: 500;
+}
+
+.item-price {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.items-divider {
+    height: 1px;
+    background-color: #f1f5f9;
+    margin: 18px 0;
+}
+
+.total-row {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.total-label {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.total-price {
+    color: #3b82f6;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/* Box de Destaque para a Previsão de Entrega */
+.delivery-prediction-card {
+    width: 100%;
+    background-color: #eff6ff; /* Tom azul suave do Figma */
+    border-radius: 10px;
+    padding: 16px 18px;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.prediction-label {
+    font-size: 12px;
+    color: #3b82f6;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.prediction-time {
+    font-size: 18px;
+    color: #1d4ed8;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Botões do Rodapé */
+.summary-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-approve-extra {
+    display: block;
+    width: 100%;
+    background-color: #3b82f6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+.btn-approve-extra:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.btn-view-gallery {
+    display: block;
+    width: 100%;
+    background-color: #e2e8f0; /* Tom cinza suave do Figma */
+    color: #1e293b;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+.btn-view-gallery:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================================
+   SEÇÃO: ITENS RECOMENDADOS (itens-recomendados.html)
+   ========================================================================== */
+
+.rec-header {
+    text-align: left;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.rec-title {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.rec-subtitle {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Card de Recomendações com Tom Laranja/Amber */
+.tech-card {
+    width: 100%;
+    background-color: #fffaf4; /* Fundo creme quente */
+    border: 1.5px solid #ffdec0; /* Borda laranja suave */
+    border-radius: 12px;
+    padding: 20px 16px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+.tech-card-title {
+    font-size: 13px;
+    color: #d96116; /* Laranja técnico */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0 0 20px 0;
+}
+
+/* Estrutura das Linhas de Itens com Checkbox */
+.rec-item-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.rec-item-row:last-child {
+    margin-bottom: 0;
+}
+
+/* Customização dos Checkboxes */
+.checkbox-wrapper {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.rec-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ffffff;
+    border: 1.5px solid #3b82f6;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.rec-checkbox:checked ~ .custom-checkbox {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.custom-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+}
+
+.rec-checkbox:checked ~ .custom-checkbox:after {
+    display: block;
+}
+
+/* Textos e Valores Internos do Card */
+.rec-item-content {
+    flex: 1;
+}
+
+.rec-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.rec-item-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.2;
+}
+
+.rec-item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3b82f6;
+    white-space: nowrap;
+}
+
+.rec-item-desc {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* Caixa de Detalhamento Financeiro (Tabela) */
+.breakdown-box {
+    width: 100%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    margin-bottom: 28px;
+}
+
+.breakdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.breakdown-label {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.breakdown-value {
+    font-weight: 700;
+}
+
+.breakdown-value.text-dark {
+    color: #1e293b;
+}
+
+.breakdown-value.text-green {
+    color: #16a34a;
+}
+
+.breakdown-divider {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 10px 0;
+}
+
+.breakdown-row.total-row {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.breakdown-label-bold {
+    color: #1e293b;
+    font-weight: 800;
+}
+
+.breakdown-value-bold.text-blue {
+    color: #3b82f6;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+/* Botões do Rodapé */
+.rec-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-confirm-extra {
+    width: 100%;
+    background-color: #3b82f6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-confirm-extra:hover {
+    background-color: #2563eb;
+}
+
+.btn-keep-base {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-keep-base:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+
+/* ==========================================================================
+   SEÇÃO: GALERIA DE FOTOS (galeria-fotos.html)
+   ========================================================================== */
+
+.gallery-header {
+    text-align: left;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.gallery-title {
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.gallery-subtitle {
+    font-size: 14px;
+    color: #708096;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 500;
+}
+
+.gallery-container {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+
+/* Gerenciamento das Linhas do Grid */
+.gallery-row-double {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.gallery-row-single {
+    width: 100%;
+}
+
+/* Estrutura do Card de Foto Unificado */
+.gallery-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.gallery-card.full-width {
+    width: 100%;
+}
+
+/* Container Superior da Foto (Cinza-azulado do Figma) */
+.photo-container {
+    background-color: #e5ecf4;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.photo-container.spec-large {
+    height: 155px; /* Altura maior para o card full-width */
+}
+
+.photo-icon {
+    color: #475569;
+}
+
+/* Badges e Tags Indicativas sobre a Imagem */
+.photo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.badge-danger {
+    background-color: #ff4a4a; /* Vermelho/Coral do Figma */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.badge-warning {
+    background-color: #ff3b3b; /* Mantém padrão de alerta destacado */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.badge-ok {
+    background-color: #16a34a; /* Verde sucesso alinhado com o fluxo */
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* Área da Legenda Inferior (Fundo Branco) */
+.photo-caption {
+    padding: 12px;
+    background-color: #ffffff;
+    border-top: 1px solid #cbd5e1;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.photo-caption p {
+    margin: 0;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* Botão de Rodapé */
+.gallery-actions {
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-return-summary {
+    display: block;
+    width: 100%;
+    background-color: #3b82f6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    text-decoration: none;
+}
+
+.btn-return-summary:hover {
+    background-color: #2563eb;
+}
+
+
+/* ==========================================================================
+   SEÇÃO: PAGAMENTO DA OS (pagamento-os.html)
+   ========================================================================== */
+
+.payment-header {
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.payment-title {
+    font-size: 26px;
+    color: #334155;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Card de Destaque com Borda Superior Verde Vibrante */
+.value-card-highlight {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border-top: 5px solid #22c55e;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.value-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.value-amount {
+    font-size: 32px;
+    color: #1e293b;
+    font-weight: 800;
+    margin: 10px 0 14px 0;
+}
+
+.badge-status-green {
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Container do QR Code */
+.qrcode-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+}
+
+.qrcode-box {
+    width: 170px;
+    height: 170px;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrcode-box span {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.qrcode-instruction {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+    max-width: 250px;
+    margin-top: 16px;
+    line-height: 1.4;
+}
+
+/* Botões de Ação do Rodapé de Pagamento */
+.payment-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-copy-pix {
+    width: 100%;
+    background-color: #1e2530;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-copy-pix:hover {
+    background-color: #0f141c;
+}
+
+.btn-save-receipt {
+    width: 100%;
+    background-color: #eaf0f6;
+    color: #1e2530;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn-save-receipt:hover {
+    background-color: #dbe4ee;
+}
