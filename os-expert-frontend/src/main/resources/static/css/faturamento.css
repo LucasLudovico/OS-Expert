@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:360px;
+    background:#f5f5f5;
+    border-radius:14px;
+    padding:18px;
+}
+
+.voltar{
+    color:#777;
+    text-decoration:none;
+    font-size:18px;
+}
+
+h1{
+    font-size:22px;
+    color:#232b3b;
+    margin-top:8px;
+}
+
+.descricao{
+    margin:15px 0 25px;
+    color:#73829d;
+    font-size:13px;
+    font-weight:600;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #d5d5d5;
+    border-radius:14px;
+    padding:15px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    font-size:14px;
+    color:#30384a;
+    margin-bottom:15px;
+}
+
+.linha{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.linha span{
+    font-size:12px;
+    color:#7f8ca2;
+}
+
+.linha strong{
+    font-size:13px;
+}
+
+.total{
+    margin-top:10px;
+}
+
+.total span{
+    font-size:15px;
+    font-weight:600;
+    color:#232b3b;
+}
+
+.total strong{
+    color:#ff7f1f;
+    font-size:22px;
+}
+
+.ticket h2{
+    font-size:42px;
+    color:#232b3b;
+}
+
+.meta-topo{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.meta-topo span{
+    font-weight:bold;
+    color:#6f658c;
+}
+
+.barra{
+    width:100%;
+    height:10px;
+    background:#ececec;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progresso{
+    width:80%;
+    height:100%;
+    background:#ff8a2a;
+}
+
+.meta-info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:8px;
+}
+
+.meta-info span{
+    font-size:10px;
+    color:#9a9a9a;
+}
