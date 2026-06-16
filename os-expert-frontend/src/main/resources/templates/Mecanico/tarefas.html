@@ -10,40 +10,38 @@
 <body>
 
 <main class="card-container app-screen">
-    <a href="home.html" class="btn-back">←</a>
+    <a href="home.html" class="btn-back">&#8592;</a>
 
     <h1 class="view-title">Minhas Tarefas</h1>
     <hr class="divider">
 
-    <div class="menu-grid">
+    <section class="task-list">
 
-        <div class="menu-card task-card-flow">
-            <div class="task-info-block">
-                <h2>ABC-1234 <span class="car-model">- Civic</span></h2>
-                <span class="status-badge status-execucao">Em Execução</span>
+        <div class="task-card status-diagnostic">
+            <div class="task-card-header">
+                <span class="task-os-number">OS #1024</span>
+                <span class="badge-task yellow">DIAGNÓSTICO</span>
             </div>
-
-            <div class="task-card-actions">
-                <a href="finalizar.html" class="btn-task btn-task-primary">Finalizar</a>
-                <a href="pecas.html" class="btn-task btn-task-secondary">Peças</a>
-            </div>
+            <h3>Civic (ABC-1234)</h3>
+            <p class="task-desc">Sintoma: Barulho ao frear e perda de torque.</p>
+            <button class="btn-task-action">Iniciar Checklist
+            </button>
         </div>
 
-        <div class="menu-card task-card-flow">
-            <div class="task-info-block">
-                <h2>XYZ-9999 <span class="car-model">- Hilux</span></h2>
-                <span class="status-badge status-aguardando">Aguardando</span>
+        <div class="task-card status-waiting">
+            <div class="task-card-header">
+                <span class="task-os-number">OS #1020</span>
+                <span class="badge-task blue">AGUARDANDO PEÇAS</span>
             </div>
-
-            <div class="task-card-actions">
-                <a href="#" class="btn-task btn-task-primary"
-                   onclick="alert('Iniciando o serviço da Hilux (XYZ-9999)!'); return false;">Iniciar</a>
-                <a href="#" class="btn-task btn-task-secondary btn-task-disabled">Peças</a>
-            </div>
+            <h3>Hilux (XYZ-9999)</h3>
+            <p class="task-desc">Aguardando liberação das peças no almoxarifado.</p>
+            <button class="btn-task-action btn-disabled" disabled>Aguardando</button>
         </div>
 
-    </div>
+    </section>
 </main>
+
+<script src="../../static/js/Mecanico/mecanico-tarefas.js"></script>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ public class AtendenteService {
     private static List<OrdemServico> ordensServico = new ArrayList<>();
 
     static {
-        // Mockando os dados com histórico detalhado para o veículo padrão do seu teste
+        // Mockando os dados com histórico detalhado para o veículo padrão
         clientes.add(new ClienteVeiculo(
                 "Ricardo Silva",
                 "ABC-1234",

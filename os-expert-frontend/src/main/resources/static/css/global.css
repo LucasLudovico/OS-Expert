@@ -1,16 +1,15 @@
-/* 1. CONFIGURAÇÃO DE FONTES E VARIÁVEIS OFICIAIS (DO FIGMA) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-    --bg-main: #FFFFFF;             /* OBackground main é Branco */
-    --primary-orange: #f57c1f;      /* Laranja oficial dos botões e logo */
-    --primary-dark: #12192c;        /* Azul escuro/Preto dos botões de salvar */
-    --text-dark: #43526e;           /* Cinza azulado para labels e textos menores */
-    --text-input: #000000;          /* Texto digitado preto */
+    --bg-main: #FFFFFF; /* OBackground main é Branco */
+    --primary-orange: #f57c1f; /* Laranja oficial dos botões e logo */
+    --primary-dark: #12192c; /* Azul escuro/Preto dos botões de salvar */
+    --text-dark: #43526e; /* Cinza azulado para labels e textos menores */
+    --text-input: #000000; /* Texto digitado preto */
     --font-main: 'Poppins', sans-serif;
 }
 
-/* 2. RESET GERAL */
+/* RESET GERAL */
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +31,7 @@ body {
 .card-container {
     background-color: var(--bg-main);
     width: 100%;
-    max-width: 450px;           /* Tamanho ideal para centralizar o formulário na tela */
+    max-width: 450px; /* Tamanho ideal para centralizar o formulário na tela */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -61,8 +60,8 @@ body {
     font-size: 16px;
     color: var(--text-input);
     background-color: transparent;
-    border: 2px solid #000000;   /* Borda preta marcante dos inputs do seu Figma */
-    border-radius: 15px;         /* Cantos arredondados dos inputs do protótipo */
+    border: 2px solid #000000;
+    border-radius: 15px;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -79,7 +78,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     border: none;
-    border-radius: 15px;         /* Cantos arredondados dos botões do Figma */
+    border-radius: 15px;
     cursor: pointer;
     transition: opacity 0.2s;
 }

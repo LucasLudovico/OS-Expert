@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS-Expert - Finalizar OS</title>
+    <link rel="stylesheet" href="../../static/css/global.css">
+    <link rel="stylesheet" href="../../static/css/mecanico.css">
+</head>
+<body>
+
+<main class="card-container app-screen">
+    <a href="tarefas.html" class="btn-back">&#8592;</a>
+
+    <h1 class="view-title">Finalizar OS</h1>
+
+    <!-- Bloco de Observações Técnicas -->
+    <div class="tech-observations-card">
+        <label for="techNotes" class="card-label">Observações Técnicas</label>
+        <textarea id="techNotes" class="tech-textarea"
+                  placeholder="Descreva aqui qualquer detalhe relevante sobre a execução..."></textarea>
+    </div>
+
+    <!-- Bloco de Tempo Total de Execução -->
+    <div class="time-tracking-card">
+        <span class="time-label">Tempo Total</span>
+        <div id="totalTimer" class="time-display">01:45:00</div>
+    </div>
+
+    <!-- Botões de Ação Principais -->
+    <div class="action-footer">
+        <button id="btnSubmitReview" class="btn-green-action">ENVIAR PARA REVISÃO</button>
+        <button id="btnPauseService" class="btn-gray-action">PAUSAR SERVIÇO</button>
+    </div>
+</main>
+
+<script src="../../static/js/Mecanico/finalizar-os.js"></script>
+
+</body>
+</html>

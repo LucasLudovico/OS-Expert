@@ -20,6 +20,8 @@ public class MainServer {
             server.createContext("/mecanicos", new MecanicoController());
             server.createContext("/servicos", new ServicoController());
             server.createContext("/ordemservico", new OrdemServicoController());
+            server.createContext("/mecanico/tarefas", new MecanicoTarefasController());
+            server.createContext("/mecanico/estoque", new EstoqueController());
 
             // Define o executor padrão (null usa o padrão do sistema)
             server.setExecutor(null);

@@ -11,7 +11,10 @@ a {
     min-height: 780px;
 }
 
-/* Botão de Retorno (Voltar) */
+/* ==========================================================================
+   COMPONENTES DE NAVEGAÇÃO COMUM (sub-arquivos do cliente)
+   ========================================================================== */
+
 .btn-back {
     background: none !important;
     border: none !important;
@@ -32,7 +35,10 @@ a {
     color: #4a5568 !important;
 }
 
-/* Cabeçalho Customizado do Portal do Cliente */
+/* ==========================================================================
+   SEÇÃO: HOME DO CLIENTE (home.html)
+   ========================================================================== */
+
 .client-header {
     text-align: center;
     margin-bottom: 30px;
@@ -41,7 +47,7 @@ a {
 
 .brand-title {
     font-size: 34px;
-    color: #ff7315; /* Laranja da marca OsExpert */
+    color: #ff7315;
     font-weight: 800;
     margin: 0;
     letter-spacing: 0.5px;
@@ -171,7 +177,6 @@ a {
     width: 100%;
 }
 
-/* Card com sombra e linha superior azul do Figma */
 .vehicle-card-highlight {
     width: 100%;
     background: #FFFFFF;
@@ -421,7 +426,7 @@ a {
 /* Box de Destaque para a Previsão de Entrega */
 .delivery-prediction-card {
     width: 100%;
-    background-color: #eff6ff; /* Tom azul suave do Figma */
+    background-color: #eff6ff;
     border-radius: 10px;
     padding: 16px 18px;
     box-sizing: border-box;
@@ -477,7 +482,7 @@ a {
 .btn-view-gallery {
     display: block;
     width: 100%;
-    background-color: #e2e8f0; /* Tom cinza suave do Figma */
+    background-color: #e2e8f0;
     color: #1e293b;
     border: none;
     border-radius: 12px;
@@ -801,7 +806,7 @@ a {
     width: 100%;
 }
 
-/* Container Superior da Foto (Cinza-azulado do Figma) */
+/* Container Superior da Foto*/
 .photo-container {
     background-color: #e5ecf4;
     height: 125px;
@@ -965,19 +970,21 @@ a {
 .qrcode-box {
     width: 170px;
     height: 170px;
-    background-color: #f1f5f9;
+    background-color: #ffffff; /* Alterado para branco para combinar com o fundo do QR Code */
     border: 1px solid #e2e8f0;
     border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px; /* Espaçamento interno para o QR code respirar */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total (170px) */
 }
 
-.qrcode-box span {
-    font-size: 14px;
-    color: #64748b;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+.qrcode-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que o QR code mantenha a proporção quadrada */
+    border-radius: 8px; /* Leve arredondamento para harmonizar com o container */
 }
 
 .qrcode-instruction {
@@ -1030,4 +1037,42 @@ a {
 
 .btn-save-receipt:hover {
     background-color: #dbe4ee;
+}
+
+
+.vehicle-status-box p {
+    color: #475569 !important;
+}
+
+.menu-card h2 {
+    color: #1e293b !important;
+}
+
+.menu-card p {
+    color: #64748b !important;
+}
+
+.client-greeting {
+    color: #475569 !important;
+}
+
+.timeline-content h3 {
+    color: #1e293b !important;
+}
+
+.timeline-content p {
+    color: #64748b !important;
+}
+
+/* Forçar as cores corretas dos badges ignorando os overrides do global.css */
+.badge-wrapper .badge-status-yellow,
+.badge-status-yellow {
+    background-color: #fef3c7 !important;
+    color: #b45309 !important;
+}
+
+.badge-wrapper .badge-status-green,
+.badge-status-green {
+    background-color: #dcfce7 !important;
+    color: #166534 !important;
 }

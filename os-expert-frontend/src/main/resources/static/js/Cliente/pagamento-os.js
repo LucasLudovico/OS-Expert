@@ -4,16 +4,48 @@ document.addEventListener("DOMContentLoaded", () => {
     let placaCliente = localStorage.getItem("cliente_placa") || "ABC1D23";
     let osCache = null;
 
+    // Elementos da simulação visual fictícia
+    const btnCopiarPix = document.getElementById("btn-copy");
+    const qrSection = document.getElementById("qr-section");
+    const statusBadge = document.getElementById("status-badge");
+    const mainTitle = document.getElementById("main-title");
+
     // Busca o valor final consolidado direto do Java
     fetch(`http://localhost:8080/ordemservico?placa=${placaCliente}`)
         .then(res => res.json())
         .then(os => {
+            const valorBaseOfICIAL = 680.00; // Alinhado com o orçamento do Atendente
+            const valorExtras = os.valorTotal - os.valorBase; // Descobre se tem adicionais
+
+            // Sobrescreve as propriedades do objeto vindo do Java antes de salvar no cache
+            os.valorBase = valorBaseOfICIAL;
+            os.valorTotal = valorBaseOfICIAL + (valorExtras > 0 ? valorExtras : 0);
+
             osCache = os;
             if (displayValor) {
                 displayValor.textContent = `R$ ${os.valorTotal.toFixed(2).replace(".", ",")}`;
             }
         })
         .catch(err => console.error("Erro ao carregar dados do pagamento:", err));
+
+
+    // Monitor de simulaçao ficticia
+    if (btnCopiarPix) {
+        btnCopiarPix.addEventListener("click", () => {
+            if (mainTitle) mainTitle.textContent = "Pagamento Realizado";
+            if (statusBadge) statusBadge.textContent = "PAGO VIA PIX";
+
+            if (qrSection) qrSection.style.display = "none";
+            btnCopiarPix.style.display = "none";
+
+            if (btnSalvarComprovante) {
+                btnSalvarComprovante.style.display = "block";
+            }
+
+            console.log("Transição executada: Botão de recibo liberado após pagamento fictício.");
+        });
+    }
+
 
     // Monitora o gatilho de geração do arquivo PDF
     if (btnSalvarComprovante) {
@@ -26,13 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const dataHoje = new Date().toLocaleDateString('pt-BR');
             const horaHoje = new Date().toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'});
             const hashValidacao = Math.random().toString(36).substring(2, 14).toUpperCase();
-
-            // Sinaliza a liquidação do pagamento ao backend
-            fetch("http://localhost:8080/ordemservico", {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({placa: placaCliente, acao: "pagar"})
-            });
 
             // Estrutura o HTML virtual do recibo para compilação do html2pdf
             const containerVirtual = document.createElement("div");
@@ -76,9 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}
             };
 
-            // Dispara a compilação do arquivo para download
+            // Dispara a compilação do arquivo para download e redireciona
             html2pdf().set(configuracoesPDF).from(containerVirtual).save()
-                .then(() => alert("Comprovante gerado e baixado com sucesso!"))
+                .then(() => {
+                    alert("Comprovante gerado e baixado com sucesso!");
+
+                    window.location.href = 'home.html?pago=true';
+                })
                 .catch(err => console.error("Falha ao compilar pdf:", err));
         });
     }

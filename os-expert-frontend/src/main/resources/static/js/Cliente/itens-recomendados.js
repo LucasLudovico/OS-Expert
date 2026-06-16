@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Seletores baseados estritamente nas suas classes originais do HTML
     const checkboxes = document.querySelectorAll(".rec-checkbox");
     const lblSelecionados = document.querySelector(".breakdown-value.text-green");
     const lblTotalGeral = document.querySelector(".breakdown-value-bold.text-blue");
     const btnConfirmar = document.querySelector(".btn-confirm-extra");
     const btnManterBase = document.querySelector(".btn-keep-base");
 
-    const VALOR_BASE = 345.00;
+    const VALOR_BASE = 680.00;
     let placaCliente = localStorage.getItem("cliente_placa") || "ABC1D23";
 
     // Função para minerar os valores da tela e recalcular os totais
@@ -25,6 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+
+        // [COMPLEMENTO SEGURO] Atualiza o valor da linha da Revisão Base no HTML se ele existir
+        const lblBasePainel = document.querySelector(".revisao-base-valor") || document.querySelector(".breakdown-value:not(.text-green)");
+        if (lblBasePainel) {
+            lblBasePainel.textContent = `R$ ${VALOR_BASE.toFixed(2).replace(".", ",")}`;
+        }
 
         // Atualiza os campos de texto inferiores formatando de volta para Real (R$)
         if (lblSelecionados) {

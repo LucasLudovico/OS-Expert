@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OsExpert - Painel do Gestor</title>
+    <link rel="stylesheet" href="../../static/css/global.css">
+    <link rel="stylesheet" href="../../static/css/gestor.css">
+</head>
+<body>
+
+<div class="card-container app-screen gestor-container">
+
+    <div class="gestor-scroll-wrapper" id="gestorContainer" onscroll="gerenciarBotoesDeRolagem()">
+
+        <div class="dashboard-viewport-page">
+            <h1 class="dashboard-title">Dashboard</h1>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-value">12</span>
+                    <span class="metric-label">OS ATIVAS</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">05</span>
+                    <span class="metric-label">CONCLUÍDAS</span>
+                </div>
+            </div>
+
+            <div class="billing-card">
+                <div class="billing-info">
+                    <span class="billing-label">Faturamento Diário</span>
+                    <h2 class="billing-value">R$ 4.850,00</h2>
+                </div>
+                <a href="faturamento.html" class="menu-icon-burger-link">
+                    <div class="menu-icon-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+
+            <h3 class="section-title">Mecânicos em Atividade</h3>
+
+            <div class="mechanics-row-layout">
+                <div class="mechanics-list">
+                    <div class="mechanic-item">
+                        <span class="mechanic-name">André (Suspensão)</span>
+                        <span class="status-dot dot-green"></span>
+                    </div>
+                    <div class="mechanic-item">
+                        <span class="mechanic-name">Ricardo (Motor)</span>
+                        <span class="status-dot dot-orange"></span>
+                    </div>
+                    <div class="mechanic-item">
+                        <span class="mechanic-name">Renatão (Freio)</span>
+                        <span class="status-dot dot-gray"></span>
+                    </div>
+                </div>
+
+                <a href="mecanicos.html" class="detailed-info-trigger">
+                    <svg class="arrow-right-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                    <span>Informações detalhadas</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="gargalos-fila-section" class="queue-viewport-page">
+            <h1 class="queue-title">Gargalos e Fila</h1>
+            <p class="queue-subtitle">Status de todas as ordens de serviço ativas na oficina.</p>
+
+            <div class="queue-list">
+                <div class="queue-card">
+                    <div class="queue-card-header">
+                        <span class="queue-os-info">OS #452 • Civic</span>
+                        <span class="queue-badge badge-execution">EXECUÇÃO</span>
+                    </div>
+                    <span class="queue-deadline">Prazo: 28/05</span>
+                </div>
+
+                <div class="queue-card">
+                    <div class="queue-card-header">
+                        <span class="queue-os-info">OS #453 • Hilux</span>
+                        <span class="queue-badge badge-waiting">AGUARDANDO</span>
+                    </div>
+                    <span class="queue-deadline">Prazo: 27/05</span>
+                </div>
+
+                <div class="queue-card">
+                    <div class="queue-card-header">
+                        <span class="queue-os-info">OS #450 • Onix</span>
+                        <span class="queue-badge badge-completed">CONCLUÍDO</span>
+                    </div>
+                    <span class="queue-deadline text-muted">Concluído hoje</span>
+                </div>
+
+                <div class="queue-card">
+                    <div class="queue-card-header">
+                        <span class="queue-os-info">OS #449 • Corolla</span>
+                        <span class="queue-badge badge-paused">PAUSADA</span>
+                    </div>
+                    <span class="queue-deadline text-muted">Cancelada ontem</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="scrollActionButton" class="scroll-footer-action estado-dashboard" onclick="executarAcaoDeRolagem()">
+        <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+        </svg>
+        <span id="scrollActionText">MOSTRAR MAIS</span>
+    </div>
+
+</div>
+
+<script>
+    const container = document.getElementById('gestorContainer');
+    const scrollButton = document.getElementById('scrollActionButton');
+    const scrollText = document.getElementById('scrollActionText');
+
+    function executarAcaoDeRolagem() {
+        if (scrollButton.classList.contains('estado-dashboard')) {
+            document.getElementById('gargalos-fila-section').scrollIntoView({behavior: 'smooth'});
+        } else {
+            container.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    }
+
+    function gerenciarBotoesDeRolagem() {
+        // Altera o estado do botão baseado na rolagem interna do wrapper
+        if (container.scrollTop > 300) {
+            scrollButton.classList.remove('estado-dashboard');
+            scrollButton.classList.add('estado-gargalos');
+            scrollText.innerText = "VOLTAR AO TOPO";
+        } else {
+            scrollButton.classList.remove('estado-gargalos');
+            scrollButton.classList.add('estado-dashboard');
+            scrollText.innerText = "MOSTRAR MAIS";
+        }
+    }
+</script>
+
+</body>
+</html>

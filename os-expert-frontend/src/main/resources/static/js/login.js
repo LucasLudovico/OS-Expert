@@ -8,7 +8,7 @@ loginForm.addEventListener('submit', async function (event) {
     const valorDigitado = emailInput.value.trim();
     const senhaDigitada = senhaInput.value;
 
-    // --- [FLUXO CLIENTE] SE NÃO TIVER '@', IDENTIFICA QUE É UMA PLACA ---
+    // Fluxo cliente, se nao tiver um '@', identifica que e uma placa.
     if (!valorDigitado.includes('@')) {
         const placaCliente = valorDigitado.toUpperCase();
 
@@ -49,9 +49,8 @@ loginForm.addEventListener('submit', async function (event) {
         }
     }
 
-    // --- [FLUXO CORPORATIVO] SE TIVER '@', É ATENDENTE, MECÂNICO OU GESTOR ---
+    // Se tiver '@', e atendente, mecanico ou gestor
     try {
-        // Rota corrigida de volta para a original: /auth/login
         const response = await fetch("http://localhost:8080/auth/login", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -70,10 +69,11 @@ loginForm.addEventListener('submit', async function (event) {
         sessionStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
         alert(`Bem-vindo(a), ${usuarioLogado.nome}! Redirecionando para o painel...`);
 
-        // Seu roteador original idêntico ao que você tinha
         if (usuarioLogado.cargo === "MECANICO") {
             window.location.href = "Mecanico/home.html";
-        } else if (usuarioLogado.cargo === "ATENDENTE" || usuarioLogado.cargo === "GESTOR" || usuarioLogado.cargo === "GERENTE") {
+        } else if (usuarioLogado.cargo === "GESTOR") {
+            window.location.href = "Gestor/home.html";
+        } else if (usuarioLogado.cargo === "ATENDENTE") {
             window.location.href = "Atendente/home.html";
         } else if (usuarioLogado.cargo === "CLIENTE") {
             window.location.href = "Cliente/home.html";

@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
             jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}
         };
 
-        // Passamos o container criado dinamicamente direto para a biblioteca
+        // Passa o container criado dinamicamente direto para a biblioteca
         html2pdf()
             .set(opcoesPdf)
             .from(containerVirtual)

@@ -48,7 +48,7 @@ public class LoginController implements HttpHandler {
 
             String corpoString = jsonRecebido.toString();
 
-            // 2. Extrator ultra-simples usando Regex nativo do Java (Zero dependências)
+            // 2. Extrator ultra-simples
             String email = extrairComRegex(corpoString, "email");
             String senha = extrairComRegex(corpoString, "senha");
 

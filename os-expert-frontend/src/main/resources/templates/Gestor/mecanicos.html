@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecânicos do Turno - OsExpert</title>
+    <link rel="stylesheet" href="../../static/css/global.css">
+    <link rel="stylesheet" href="../../static/css/gestor.css">
+</head>
+<body>
+
+<div class="card-container app-screen gestor-container">
+
+    <a href="home.html" class="btn-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"
+             class="arrow-back-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+        </svg>
+    </a>
+
+    <h1 class="page-title">Mecânicos do Turno</h1>
+    <p class="page-subtitle">Acompanhe as ordens de serviço ativas em cada elevador da oficina.</p>
+
+    <div class="mechanics-detailed-list">
+
+        <div class="mechanic-detailed-card">
+            <div class="card-header">
+                <span class="mechanic-info-title">André (Suspensão)</span>
+                <span class="status-badge badge-occupied">OCUPADO</span>
+            </div>
+            <div class="card-body">
+                <span class="work-status">Trabalhando na <strong>OS #452</strong></span>
+                <span class="vehicle-info">Civic (ABC-1234)</span>
+            </div>
+        </div>
+
+        <div class="mechanic-detailed-card">
+            <div class="card-header">
+                <span class="mechanic-info-title">Ricardo (Motor)</span>
+                <span class="status-badge badge-available">DISPONÍVEL</span>
+            </div>
+            <div class="card-body">
+                <span class="work-status">Nenhum veículo alocado no momento.</span>
+                <span class="vehicle-info">Corolla (KTY-0988)</span>
+            </div>
+        </div>
+
+        <div class="mechanic-detailed-card">
+            <div class="card-header">
+                <span class="mechanic-info-title">Renatão (Freio)</span>
+                <span class="status-badge badge-unavailable">INDISPONÍVEL</span>
+            </div>
+            <div class="card-body">
+                <span class="work-status">Funcionário ausente no momento.</span>
+                <span class="vehicle-info"></span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

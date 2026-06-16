@@ -13,20 +13,20 @@
     <a href="home.html" class="btn-back">&#8592;</a>
 
     <header class="payment-header">
-        <h1 class="payment-title">Pagamento Realizado</h1>
+        <h1 class="payment-title" id="main-title">Aguardando Pagamento</h1>
     </header>
 
     <section class="value-card-highlight">
         <span class="value-label">VALOR CONSOLIDADO</span>
         <h2 class="value-amount">R$ 345,00</h2>
         <div class="badge-wrapper">
-            <span class="badge-status-green">AGUARDANDO PIX</span>
+            <span class="badge-status-green" id="status-badge">AGUARDANDO PIX</span>
         </div>
     </section>
 
-    <section class="qrcode-container">
+    <section class="qrcode-container" id="qr-section">
         <div class="qrcode-box">
-            <span>QR CODE PIX</span>
+            <img src="https://lnk.ua/qr/RQA7mFn9A" alt="QR Code Pix" class="qrcode-img"/>
         </div>
         <p class="qrcode-instruction">
             Escaneie o QR Code acima ou copie a chave abaixo para realizar o pagamento.
@@ -34,8 +34,8 @@
     </section>
 
     <footer class="payment-actions">
-        <button class="btn-copy-pix">COPIAR CÓDIGO PIX</button>
-        <button class="btn-save-receipt">SALVAR COMPROVANTE</button>
+        <button class="btn-copy-pix" id="btn-copy">COPIAR CÓDIGO PIX</button>
+        <button class="btn-save-receipt" style="display: none;">SALVAR COMPROVANTE</button>
     </footer>
 </main>
 
